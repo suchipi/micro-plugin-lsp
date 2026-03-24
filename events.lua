@@ -194,7 +194,7 @@ function onBufferOpen(buf)
 end
 
 function onStdout(filetype)
-	local nextMessage = ''
+	local nextMessage = nil
 	return function(text)
 		if text:starts("Content-Length:") then
 			message = text
